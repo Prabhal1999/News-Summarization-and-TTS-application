@@ -1,21 +1,22 @@
 import streamlit as st
-import requests
 import os
+from utils import extract_news, generate_report
 
+# Streamlit Web Interface
 st.title("News Summarization and Text-to-Speech Application")
 
+# Input the company name
 company = st.text_input("Enter the Company's Name")
 generate_report_button = st.button("Generate Report")
 
+#  Cenerate report by clicking the button
 if generate_report_button and company:
     with st.spinner("Extracting news articles and generating the report"):
         try:
-            response = requests.get(f"http://localhost:8000/analyze/{company}")
-            response.raise_for_status()
-            report = response.json()
+            articles = extract_news(company)
+            report = generate_report(articles, company)
             
             st.subheader(f"Report on {company}")
-            
             for i in report["Articles"]:
                 st.write(f"**Title**: {i['Title']}")
                 st.write(f"**Summary**: {i['Summary']}")
@@ -48,8 +49,5 @@ if generate_report_button and company:
             else:
                 st.warning("Audio summary could not be generated.")
         
-        except requests.exceptions.RequestException as e:
-            st.error(
-                f"Error communicating with the backend: {e}\n"
-                "Please ensure the FastAPI backend is running and accessible"
-            )
+        except Exception as e:
+            st.error(f"Error: {str(e)}")
