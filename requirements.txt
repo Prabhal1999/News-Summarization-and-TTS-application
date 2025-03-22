@@ -1,12 +1,10 @@
 beautifulsoup4
 deep-translator
-fastapi
 gtts
 keybert
 python-dotenv
 requests
 streamlit
 transformers
-uvicorn
 
 
