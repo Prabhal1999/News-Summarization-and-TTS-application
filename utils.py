@@ -41,7 +41,9 @@ def extract_news(company):
             raise Exception("NewsAPI error")
         
         articles = []
-        for a in data["articles"][:10]:
+        for a in data["articles"]:
+            if len(articles) >= 10:
+                break
             title = a.get("title", "No title available")
             link = a.get("url")
             description = a.get("description", "No description available")
