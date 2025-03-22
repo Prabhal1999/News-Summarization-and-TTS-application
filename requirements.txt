@@ -2,7 +2,6 @@ beautifulsoup4
 deep-translator
 gtts
 keybert
-python-dotenv
 requests
 streamlit
 transformers
