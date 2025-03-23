@@ -81,3 +81,6 @@ This application allows the users to:
 **Links:**
 https://news-summarization-and-tts-application.streamlit.app/
 https://huggingface.co/spaces/prabhal/News-Summarization-and-TTS-application
+
+**Note:**
+The date has to be manually changed and set to current date in the URL for fetching news articles from the NewsAPI
