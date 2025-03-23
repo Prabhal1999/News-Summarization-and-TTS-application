@@ -1,5 +1,4 @@
 import os
-from dotenv import load_dotenv
 import requests
 from bs4 import BeautifulSoup
 from transformers import pipeline
@@ -8,8 +7,6 @@ import gtts
 from collections import Counter
 from deep_translator import GoogleTranslator
 import logging
-
-load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
