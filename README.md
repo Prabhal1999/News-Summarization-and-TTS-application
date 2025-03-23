@@ -24,7 +24,7 @@ This application allows the users to:
    export NEWS_API_KEY="your-api-key"
 
 4. **Run the Application**
-   streamlit run streamlit_app.py
+   streamlit run app.py
 
 5. **Access the Application on your browser**
    http://localhost:8501
@@ -50,7 +50,7 @@ This application allows the users to:
 1. Clone the repository: git clone https://github.com/Prabhal1999/News-Summarization-and-TTS-application
 2. Install dependencies: pip install -r requirements.txt
 3. Set the NewsAPI key: export NEWS_API_KEY="your-api-key"
-4. Run the app: streamlit run streamlit_app.py
+4. Run the app: streamlit run app.py
 5. Access at http://localhost:8501.
 
 **Model Details**
@@ -77,3 +77,7 @@ This application allows the users to:
 **Limitations**
 1. Some news websites may use javascript-based rendering, which BeautifulSoup cannot scrape effectively. In such cases, the app falls back to NewsAPI content.
 2. The sentiment analysis model might miss complex emotions in news articles, as it’s trained on Twitter data. For example, it may struggle with sarcasm or mixed sentiments.
+
+**Links:**
+https://news-summarization-and-tts-application.streamlit.app/
+https://huggingface.co/spaces/prabhal/News-Summarization-and-TTS-application
