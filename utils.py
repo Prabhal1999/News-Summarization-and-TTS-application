@@ -26,7 +26,7 @@ def extract_news(company):
     if not NEWS_API_KEY:
         raise ValueError("NEWS_API_KEY not set in the environment.")
 
-    url = f"https://newsapi.org/v2/everything?q={company}&from=2025-04-03&sortBy=publishedAt&apiKey={NEWS_API_KEY}"
+    url = f"https://newsapi.org/v2/everything?q={company}&from=2025-04-05&sortBy=publishedAt&apiKey={NEWS_API_KEY}"
 
 
     try:
